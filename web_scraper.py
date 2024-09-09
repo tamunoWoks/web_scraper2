@@ -71,3 +71,6 @@ def main():
     """
     Main function to execute the scraping with user-provided URL.
     """
+
+    # Prompt the user to enter a URL
+    url = input("Enter the URL to scrape: ").strip()
