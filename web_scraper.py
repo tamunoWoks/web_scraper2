@@ -82,3 +82,6 @@ def main():
 
     # Call the function to scrape the website
     scrape_website(url)
+
+if __name__ == "__main__":
+    main()
