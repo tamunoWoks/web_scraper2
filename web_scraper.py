@@ -60,3 +60,9 @@ def scrape_website(url):
 
     except requests.RequestException as e:
         print(f"Error fetching data: {e}")
+
+def is_valid_url(url):
+    """
+    Validates the URL format.
+    """
+    return validators.url(url)
