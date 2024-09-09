@@ -74,3 +74,8 @@ def main():
 
     # Prompt the user to enter a URL
     url = input("Enter the URL to scrape: ").strip()
+
+    # Validate the URL
+    if not is_valid_url(url):
+        print("Invalid URL. Please enter a valid URL.")
+        return
