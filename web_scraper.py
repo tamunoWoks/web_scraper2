@@ -57,3 +57,6 @@ def scrape_website(url):
                 href = link.get('href')
                 link_text = link.get_text().strip()
                 print(f"Link Text: {link_text}, URL: {href}")
+
+    except requests.RequestException as e:
+        print(f"Error fetching data: {e}")
