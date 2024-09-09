@@ -48,3 +48,12 @@ def scrape_website(url):
                 img_src = img.get('src')
                 alt_text = img.get('alt', 'No alt text')
                 print(f"Image Source: {img_src}, Alt Text: {alt_text}")
+
+        # Scrape all links
+        links = soup.find_all('a')
+        if links:
+            print("\nLinks:")
+            for link in links:
+                href = link.get('href')
+                link_text = link.get_text().strip()
+                print(f"Link Text: {link_text}, URL: {href}")
