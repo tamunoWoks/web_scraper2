@@ -32,3 +32,10 @@ def scrape_website(url):
                 print(f"\n{heading_tag.upper()} Tags:")
                 for heading in headings:
                     print(heading.get_text().strip())
+
+        # Scrape all paragraphs
+        paragraphs = soup.find_all('p')
+        if paragraphs:
+            print("\nParagraphs:")
+            for para in paragraphs:
+                print(para.get_text().strip())
