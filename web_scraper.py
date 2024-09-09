@@ -39,3 +39,12 @@ def scrape_website(url):
             print("\nParagraphs:")
             for para in paragraphs:
                 print(para.get_text().strip())
+
+        # Scrape all images
+        images = soup.find_all('img')
+        if images:
+            print("\nImages:")
+            for img in images:
+                img_src = img.get('src')
+                alt_text = img.get('alt', 'No alt text')
+                print(f"Image Source: {img_src}, Alt Text: {alt_text}")
